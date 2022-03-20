@@ -15,8 +15,8 @@ export default function App() {
   const [result, setResult] = useState("");
   var btn1 = document.getElementById("btn1");
   var btn2 = document.getElementById("btn2");
-  var card = document.getElementById("card");
-  var card2 = document.getElementById("card2");
+  var card = document.getElementById("deck1");
+  var card2 = document.getElementById("deck2");
 
   const deck_loc = "./images/deck/";
 
@@ -156,7 +156,7 @@ export default function App() {
                     <div class="card-body">
                         <h5 class="card-title">Card 1</h5>
                         <p class="card-text" id='card1'>
-                          <img src = {require(`${deck(num1)}`)} width = "100px" height = "150px" id = "card"/>
+                          <img src = {require(`${deck(num1)}`)} width = "100px" height = "150px" id = "deck1"/>
                           {iteration <= 5 ? num1 : "-"}
                         </p>
                     </div>
@@ -167,7 +167,7 @@ export default function App() {
                     <div class="card-body">
                         <h5 class="card-title">Card 2</h5>
                         <p class="card-text" id='card2'>
-                          <img src = {require(`${deck(num2)}`)} width = "100px" height = "150px" id = "card2"/>
+                          <img src = {require(`${deck(num2)}`)} width = "100px" height = "150px" id = "deck2"/>
                           {iteration <= 5 ? num2 : "-"}
                         </p>
                     </div>
