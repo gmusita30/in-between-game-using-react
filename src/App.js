@@ -15,6 +15,30 @@ export default function App() {
   const [result, setResult] = useState("");
   var btn1 = document.getElementById("btn1");
   var btn2 = document.getElementById("btn2");
+  var card = document.getElementById("card");
+  var card2 = document.getElementById("card2");
+
+  const deck_loc = "./images/deck/";
+
+  const deck_name = ['_of_clubs', '_of_diamonds','_of_hearts','_of_spades'];
+
+  const deck = (num) => {
+    if (num == 1) {
+      return deck_loc + "ace" + deck_name[random(0, 3)] + ".png";
+    }
+    else if (num >= 2 && num <= 10) {
+      return deck_loc + num + "" + deck_name[random(0, 3)] + ".png";
+    }
+    else if (num == 11) {
+      return deck_loc + "jack" + deck_name[random(0, 3)] + ".png";
+    }
+    else if (num == 12) {
+      return deck_loc + "queen" + deck_name[random(0, 3)] + ".png";
+    }
+    else if (num == 13) {
+      return deck_loc + "king" + deck_name[random(0, 3)] + ".png";
+    }
+  }
 
   const getIteration = () => {
     return iteration;
@@ -36,6 +60,8 @@ export default function App() {
     if (iteration == 5) {
       btn1.disabled = true;
       btn2.disabled = true;
+      card.hidden = true;
+      card2.hidden = true;
     }
   };
 
@@ -112,6 +138,8 @@ export default function App() {
     setIteration(1);
     btn1.disabled = false;
     btn2.disabled = false;
+    card.hidden = false;
+    card2.hidden = false;
     setResult("");
   };
 
@@ -125,10 +153,10 @@ export default function App() {
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="card">
-  
                     <div class="card-body">
                         <h5 class="card-title">Card 1</h5>
                         <p class="card-text" id='card1'>
+                          <img src = {require(`${deck(num1)}`)} width = "100px" height = "150px" id = "card"/>
                           {iteration <= 5 ? num1 : "-"}
                         </p>
                     </div>
@@ -139,6 +167,7 @@ export default function App() {
                     <div class="card-body">
                         <h5 class="card-title">Card 2</h5>
                         <p class="card-text" id='card2'>
+                          <img src = {require(`${deck(num2)}`)} width = "100px" height = "150px" id = "card2"/>
                           {iteration <= 5 ? num2 : "-"}
                         </p>
                     </div>
