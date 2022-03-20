@@ -1,0 +1,87 @@
+.App {
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-shadow: lightgray 0px 0px 30px;
+    text-align: center;
+
+  }
+
+body{
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(./images/card1.jpg);
+}
+
+#btn1{
+  margin: 20px;
+  width: 150px;
+}
+
+
+#btn2{
+  margin: 20px;
+  width: 150px;
+}
+  
+
+.btn-change{
+  height: 50px;
+  width: 100px;
+  background: lightseagreen;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  border: 0px;
+  color: #fff;
+}
+.btn-change:hover{
+  -webkit-transform: scale(1.1);
+  background: #31708f;
+}
+
+.btn-change1{
+  height: 50px;
+  width: 100px;
+  background: lightseagreen;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  border: 0px;
+  color: #fff;
+}
+.btn-change1:hover{
+  -webkit-transform: scale(1.1);
+  background: #31708f;
+}
+
+.btn-change2{
+  height: 50px;
+  width: 100px;
+  background: lightseagreen;
+  margin: 20px;
+  margin-top: -20px;
+  border-radius: 15px;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  border: 0px;
+  color: #fff;
+}
+.btn-change2:hover{
+  -webkit-transform: scale(1.1);
+  background: #31708f;
+}
+
+.card{
+width:auto;
+}
+
+#card1{
+  font-size: 100px;
+}
+#card2{
+  font-size: 100px;
+}
+
+
+

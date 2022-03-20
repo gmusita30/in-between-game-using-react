@@ -1,6 +1,5 @@
 {
-  "name": "reactjscss03072022",
-  "homepage": "https://gmusita30.github.io/reactjscss03072022/",
+  "name": "reactgame",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.1.3",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.0",
