@@ -129,7 +129,7 @@ export default function App() {
                     <div class="card-body">
                         <h5 class="card-title">Card 1</h5>
                         <p class="card-text" id='card1'>
-                          {num1}
+                          {iteration <= 5 ? num1 : "-"}
                         </p>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ export default function App() {
                     <div class="card-body">
                         <h5 class="card-title">Card 2</h5>
                         <p class="card-text" id='card2'>
-                          {num2}
+                          {iteration <= 5 ? num2 : "-"}
                         </p>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ export default function App() {
       <input
         type="button"
         class="btn-change"
-        value={LabelCheck(0)}
+        value={iteration <= 5 ? LabelCheck(0) : "-"}
         id="btn1"
         onClick={(evt) => {
           InBet(evt.target.value);
@@ -163,7 +163,7 @@ export default function App() {
         type="button"
         class="btn-change1"
         id="btn2"
-        value={LabelCheck(1)}
+        value={iteration <= 5 ? LabelCheck(1) : "-"}
         onClick={(evt) => {
           InBet(evt.target.value);
         }}

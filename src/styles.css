@@ -72,6 +72,14 @@ body{
   background: #31708f;
 }
 
+.btn-change:disabled{
+  background: gray !important;
+}
+
+.btn-change1:disabled{
+  background: gray !important;
+}
+
 .card{
 width:auto;
 }
