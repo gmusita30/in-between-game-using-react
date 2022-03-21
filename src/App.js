@@ -78,7 +78,7 @@ export default function App() {
   };
 
   const resultUpdateSame = () => {
-    setResult(`Unlucky! All of the numbers are ${getNum3()}`);
+    setResult(`Lose! All of the numbers are ${getNum3()}`);
   };
 
   const LabelCheck = (label) => {
@@ -146,35 +146,26 @@ export default function App() {
   return (
     <div className="App">
       <h1>In Between Game</h1>
-      <h2>  {iteration <= 5 ? "Game " + iteration  + "/5" : "Game Over!"}</h2>
-      <h2>Score: <span style={{color:'red'}}>{score}</span></h2>
+      <h3>  {iteration <= 5 ? "Game " + iteration  + "/5" : "Game Over!"}</h3>
+      <h3>Score: <span style={{color:'red'}}>{score}</span></h3>
 
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 1</h5>
-                        <p class="card-text" id='card1'>
-                          <img src = {require(`${deck(num1)}`)} width = "100px" height = "150px" id = "deck1"/>
-                          {iteration <= 5 ? num1 : "-"}
-                        </p>
+      <div className="container">
+            <div className="row">
+                <div className="col">
+                    <div className="card" style={{width: "10rem", marginLeft: '255px'}}>
+                    <img className="card-img-top img-fluid" src = {require(`${deck(num1)}`)} width = "10px" height = "5%" id = "deck1"/>
+                   <h2><span style={{color:'red'}}>{iteration <= 5 ? num1 : "-"}</span></h2> 
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">  
-                    <div class="card-body">
-                        <h5 class="card-title">Card 2</h5>
-                        <p class="card-text" id='card2'>
-                          <img src = {require(`${deck(num2)}`)} width = "100px" height = "150px" id = "deck2"/>
-                          {iteration <= 5 ? num2 : "-"}
-                        </p>
+      
+                <div className="col">
+                    <div className="card" style={{width: "10rem", marginLeft: '130px'}}>
+                    <img className="card-img-top img-fluid" src = {require(`${deck(num2)}`)} width = "100px" height = "150px" id = "deck2" />
+                    <h2><span style={{color:'red'}}>{iteration <= 5 ? num2 : "-"}</span></h2>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
       <h2 hidden>Num 3: {num3}</h2>
       <h2>{result}</h2>
